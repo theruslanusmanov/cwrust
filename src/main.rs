@@ -34,3 +34,11 @@ fn divisors(n: u32) -> u32 {
     (1..=n).filter(|x| n % x == 0).count() as u32
 }
 
+/// https://www.codewars.com/kata/56747fd5cb988479af000028/train/rust
+fn get_middle(s:&str) -> &str {
+    let len = s.len();
+    let from = (len - 1) / 2;
+    let to = (len / 2) + 1;
+    &s[from .. to]
+}
+
